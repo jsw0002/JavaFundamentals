@@ -15,18 +15,32 @@ public class Main {
         // confirm your code is working.
         // Add some System.out.println's in the two methods above as well.
 
-        BankAccount jordan = new BankAccount();
+//        BankAccount jordan = new BankAccount(); //12345, 0.00, "Jordan Willis", "myemail@jordan.com", "(317) 854-6523");
+//
+//        jordan.depositToAccount(500);
+//
+//        jordan.withdrawalFromAccount(250);
+//
+//        jordan.withdrawalFromAccount(1000);
+//
+//        BankAccount tim = new BankAccount("Tim", "tim@email.com", "12345");
+//        System.out.println(tim.getAccountNumber() + " name " + tim.getCustomerName());
 
-        jordan.setAccountNumber(963258);
-        jordan.setBalance(500);
-        jordan.setCustomerName("Jordan Willis");
-        jordan.setEmail("jsw0002@gmail.com");
-        jordan.setPhoneNumber("3178546523");
+        // Create a new class VipCustomer
+        // it should have 3 fields, name, credit limit, and email address.
+        // create 3 constructors
+        // 1st constructor empty should call the constructor with 3 parameters with default values
+        // 2nd constructor should pass on the 2 values it receives and add a default value for the 3rd
+        // 3rd constructor should save all fields
+        // create getters only for this using code generation of intellij as setters wont be needed
+        // test and confirm it works
 
-        jordan.depositToAccount(500);
+        VipCustomer ken = new VipCustomer();
+        VipCustomer bobbie = new VipCustomer("Bobbie", "bobbie@email.com");
+        VipCustomer jordan = new VipCustomer("Jordan", 100000, "jordan@email.com");
 
-        jordan.withdrawalFromAccount(250);
-
-        jordan.withdrawalFromAccount(1000);
+        System.out.println(ken.getCreditLimit());
+        System.out.println(bobbie.getCreditLimit());
+        System.out.println(jordan.getCreditLimit());
     }
 }

@@ -10,6 +10,27 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+
+
+    public BankAccount(){
+        this(56789, 2.50, "Default name", "Default address", "default phone");
+
+        System.out.println("Empty constructor called");
+    }
+
+    public BankAccount(int accountNumber, double balance, String customerName, String email, String phoneNumber){
+        System.out.println("Account constructor with parameters called");
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount(String customerName, String email, String phoneNumber) {
+        this(99999, 100.55, customerName, email, phoneNumber);
+    }
+
     // Code then generate then getter and setter then select all and it auto creates the getters/setters
 
     public void setAccountNumber(int accountNumber){
@@ -74,7 +95,7 @@ public class BankAccount {
 //    }
 
     public void withdrawalFromAccount(double withdrawalAmount){
-        if(this.balance - withdrawalAmount <= 0){
+        if(this.balance - withdrawalAmount < 0){
             System.out.println("Only $" + this.balance + " available. Withdrawal not processed.");
         } else {
             this.balance -= withdrawalAmount;
