@@ -33,9 +33,41 @@ public class Main {
         // an even number or not.
         // return true if an even number, otherwise return false
 
-        System.out.println("2 is even: " + isEvenNumber(2));
-        System.out.println("33 is even: " + isEvenNumber(33));
-        System.out.println("62 is even: " + isEvenNumber(62));
+        int number = 5;
+        int finishNumber = 20;
+        while (number <= finishNumber) {
+            if (!isEvenNumber(number)) {
+                number++;
+                continue;
+            }
+            System.out.println("Even number " + number);
+            number++;
+        }
+
+        System.out.println();
+
+        // Modify the while code above
+        // Make it also record the total number of even numbers it has found
+        // and break it once 5 are found
+        // and at the end, display the total number of even numbers found
+
+        number = 5;
+        finishNumber = 20;
+        int numOfEvenNumbers = 0;
+        while (number <= finishNumber) {
+            if (!isEvenNumber(number)) {
+                number++;
+                continue;
+            }
+            System.out.println("Even number " + number);
+            number++;
+
+            numOfEvenNumbers++;
+            if (numOfEvenNumbers >= 5){
+                break;
+            }
+            }
+        System.out.println("Total even numbers found = " + numOfEvenNumbers);
     }
 
     public static boolean isEvenNumber(int number){
